@@ -14,7 +14,7 @@
   "scripts": {
     "commit": "./node_modules/cz-customizable/standalone.js",
     "build": "microbundle-crl --no-compress --format modern,cjs",
-    "start": "microbundle-crl watch --no-compress --format modern,cjs",
+    "start": "CHOKIDAR_USEPOLLING=true microbundle-crl watch --no-compress --format modern,cjs",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
@@ -32,7 +32,7 @@
     "babel-eslint": "^10.0.3",
     "cross-env": "^7.0.2",
     "cz-customizable": "^6.3.0",
-    "eslint": "^6.8.0",
+    "eslint": "^7.11.0",
     "eslint-config-prettier": "^6.7.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-config-standard-react": "^9.2.0",
